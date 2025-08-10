@@ -1,0 +1,35 @@
+Writing Basic SELECT Queries
+
+-- 1. Select all columns
+SELECT * FROM students;
+
+-- 2. Select specific columns
+SELECT name, marks FROM students;
+
+-- 3. WHERE clause to filter rows
+SELECT * FROM students WHERE marks > 85;
+
+-- 4. Using AND and OR
+SELECT * FROM students WHERE age > 20 AND marks > 85;
+SELECT * FROM students WHERE city = 'Delhi' OR city = 'Mumbai';
+
+-- 5. LIKE keyword usage
+SELECT * FROM students WHERE name LIKE 'A%';
+
+-- 6. BETWEEN keyword usage
+SELECT * FROM students WHERE marks BETWEEN 80 AND 90;
+
+-- 7. ORDER BY ascending
+SELECT * FROM students ORDER BY marks ASC;
+
+-- 8. ORDER BY descending
+SELECT * FROM students ORDER BY marks DESC;
+
+-- 9. LIMIT the number of results
+SELECT * FROM students ORDER BY marks DESC LIMIT 3;
+
+-- 10. Using DISTINCT
+SELECT DISTINCT city FROM students;
+
+-- 11. Aliasing example
+SELECT name AS student_name, marks AS score FROM students;
